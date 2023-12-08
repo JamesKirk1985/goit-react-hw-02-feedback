@@ -1,10 +1,10 @@
-export const FeedbackOptions = ({options, onLeaveFeedback}) => {
+import css from './FeedbackOptions.module.css'
+export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     return (
-        <>
-        {/* <h2>Please leave feedback</h2> */}
-      <button type="button" onClick={onLeaveFeedback}>{ options.positive}</button>
-      <button type="button" onClick={onLeaveFeedback}>{ options.neutral}</button>
-      <button type="button" onClick={onLeaveFeedback}>{ options.negative}</button>
+        <>        
+        <button className={css.buttonGood } type="button" onClick={onLeaveFeedback}>{ options.positive}</button>
+      <button className={css.buttonNeutral } type="button" onClick={onLeaveFeedback}>{ options.neutral}</button>
+      <button className={css.buttonBad } type="button" onClick={onLeaveFeedback}>{ options.negative}</button>
         </>
     )
 }

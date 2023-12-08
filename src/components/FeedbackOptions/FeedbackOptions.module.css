@@ -1,0 +1,13 @@
+.buttonGood {
+  background-color: greenyellow;
+  margin-left: 100px;
+  margin-right: 20px;
+}
+.buttonNeutral {
+  background-color: yellow;
+
+  margin-right: 20px;
+}
+.buttonBad {
+  background-color: red;
+}
