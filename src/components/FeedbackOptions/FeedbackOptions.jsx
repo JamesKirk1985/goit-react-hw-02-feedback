@@ -1,10 +1,25 @@
+import { Component } from 'react'
 import css from './FeedbackOptions.module.css'
-export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+export class FeedbackOptions extends Component  {
+  state = {
+    options: ["Good", "Neutral", "Bad"]
+  }
+  render() {    
     return (
-        <>        
-        <button className={css.buttonGood } type="button" onClick={onLeaveFeedback}>{ options.positive}</button>
-      <button className={css.buttonNeutral } type="button" onClick={onLeaveFeedback}>{ options.neutral}</button>
-      <button className={css.buttonBad } type="button" onClick={onLeaveFeedback}>{ options.negative}</button>
-        </>
-    )
+      <>
+        {this.state.options.map(
+          (item, i) => {
+            return(
+              <button
+            key={i}    
+            className={css.button}
+            type="button"
+            onClick={this.props.onLeaveFeedback}>
+            {item}
+          </button>  )          
+          }
+        )}
+      </>         
+      )
+  }
 }

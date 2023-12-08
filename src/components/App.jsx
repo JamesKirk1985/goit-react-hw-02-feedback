@@ -28,10 +28,6 @@ class Feedback extends Component {
       <Section title="Please leave feedback">
 
       <FeedbackOptions
-        options={{
-          positive: "Good",
-          neutral: "Neutral",
-          negative: "Bad"}}
         onLeaveFeedback={this.addFeedback}>        
         </FeedbackOptions>      
         {this.countTotalFeedback() === 0 ? 
@@ -43,8 +39,7 @@ class Feedback extends Component {
         total={this.countTotalFeedback()}
         positivePercentage={this.countPositiveFeedbackPercentage()}>        
         </Statistics> 
-      }     
-
+        }
       </Section>      
     </>
   }
