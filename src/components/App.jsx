@@ -28,7 +28,8 @@ class Feedback extends Component {
       <Section title="Please leave feedback">
 
       <FeedbackOptions
-        onLeaveFeedback={this.addFeedback}>        
+          onLeaveFeedback={this.addFeedback}
+        options={this.state}>        
         </FeedbackOptions>      
         {this.countTotalFeedback() === 0 ? 
           <Notification message="There is no feedback"></Notification> :

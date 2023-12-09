@@ -1,25 +1,20 @@
-import { Component } from 'react'
 import css from './FeedbackOptions.module.css'
-export class FeedbackOptions extends Component  {
-  state = {
-    options: ["Good", "Neutral", "Bad"]
-  }
-  render() {    
+export const FeedbackOptions =({onLeaveFeedback, options}) => {  
+    
     return (
       <>
-        {this.state.options.map(
+        {Object.keys(options).map(
           (item, i) => {
             return(
               <button
             key={i}    
             className={css.button}
             type="button"
-            onClick={this.props.onLeaveFeedback}>
+            onClick={onLeaveFeedback}>
             {item}
           </button>  )          
           }
         )}
       </>         
-      )
-  }
+      )  
 }
